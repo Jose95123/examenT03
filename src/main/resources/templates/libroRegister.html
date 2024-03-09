@@ -57,9 +57,8 @@
 			<div class="form-group">
 				<label for="genero">Género:</label>
 				<select class="form-control" id="genero" name="genero" th:field="*{genero}" required>
-					<option value="FICCION">Ficción</option>
-					<option value="NO_FICCION">No Ficción</option>
-					<!-- Agrega las demás opciones de género aquí -->
+					<option th:each="genero : ${generos}" th:value="${genero.idgenero}" th:text="${genero.nombre}">
+					</option>
 				</select>
 			</div>
 
